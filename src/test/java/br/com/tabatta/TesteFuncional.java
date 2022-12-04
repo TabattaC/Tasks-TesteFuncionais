@@ -65,13 +65,13 @@ public class TesteFuncional {
             driver.findElement(By.id("saveButton")).click();
             //Validar mensagem de sucesso
             WebElement btnSalvar = driver.findElement(By.id("message"));
-            Assert.assertEquals("Erro Funcional - Mensagem de erro ao salvar nao foi mostrada corretamente ", "Fill the task description  ", btnSalvar.getText());
+            Assert.assertEquals("Erro Funcional - Mensagem de erro ao salvar nao foi mostrada corretamente ", "Fill the task description", btnSalvar.getText());
         } finally {
             driver.quit();
         }
     }
     @Test
-    public void naoSalvarTarefaSemData() {
+    public void naoDeveSalvarTarefaSemData() {
         WebDriver driver = acessarAplicacao();
         try {
             driver.findElement(By.id("addTodo")).click();
@@ -87,7 +87,7 @@ public class TesteFuncional {
         }
     }
     @Test
-    public void naoSalvarTarefaComDataPassada() {
+    public void naoDeveSalvarTarefaComDataPassada() {
         WebDriver driver = acessarAplicacao();
         try {
             driver.findElement(By.id("addTodo")).click();
